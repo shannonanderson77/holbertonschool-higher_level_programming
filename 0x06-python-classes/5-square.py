@@ -31,7 +31,7 @@ class Square():
         '''A method that prints a square
         '''
         if self.__size is 0:
-            print ("")
+            print("")
         else:
             for i in range(self.__size):
                 print("#" * self.__size)
