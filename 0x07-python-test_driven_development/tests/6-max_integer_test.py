@@ -6,7 +6,7 @@ max_integer = __import__('6-max_integer').max_integer
 
 
 class TestMaxInteger(unittest.TestCase):
-
+    '''do I need a docstring here'''
     def test_max_at_end(self):
         '''Test when max is at the end of list'''
         list = [1, 2, 3, 4]
@@ -35,7 +35,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_max_empty_list(self):
         '''Test when list is empty'''
         list = []
-        self.assertEqual(None, None)
+        self.assertIsNone(None)
 
     def test_max_one_element(self):
         '''Test when list has one number'''
