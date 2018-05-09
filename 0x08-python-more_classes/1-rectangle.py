@@ -18,9 +18,9 @@ class Rectangle:
     @width.setter
     def width(self, value):
         if type(value) is not int:
-            raise TypeError("[TypeError] width must be an ineger")
+            raise TypeError("width must be an ineger")
         elif value < 0:
-            raise TypeError("[TypeError] width must be >= 0")
+            raise TypeError("width must be >= 0")
         else:
             self.__width = value
 
@@ -34,7 +34,6 @@ class Rectangle:
         if type(value) is not int:
             raise TypeError("height must be an ineger")
         if value < 0:
-            raise ValueError("[ValueError] height must be >= 0")
+            raise ValueError("height must be >= 0")
         else:
-            print("{} {}".format(value, type(value)))
             self.__height = value
