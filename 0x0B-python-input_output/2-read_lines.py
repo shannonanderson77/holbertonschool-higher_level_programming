@@ -7,13 +7,6 @@
 def read_lines(filename="", nb_lines=0):
     count = 0
     with open(filename, "r", encoding="utf8") as file:
-        for line in file:
-            count += 1
-        if nb_lines >= count or nb_lines <= 0:
-            for i in range(count):
-                text = file.readline()
-                print("{}".format(text), end="")
-        else:
-            for i in range(nb_lines):
-                text = file.readline()
-                print("{}".format(text), end="")
+        for count, value in enumerate(file, 1):
+            if nb_lines >= count or nb_lines <= 0:
+                print("{}".format(value), end="")
