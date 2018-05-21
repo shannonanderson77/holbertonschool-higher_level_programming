@@ -240,3 +240,8 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError) as message:
             rect = Rectangle(1, float('inf'))
             self.assertIn("height must be an integer", message)
+
+    def test_rectangle_mm_area(self):
+        '''Test area of rectangle'''
+        rect = Rectangle(2, 2)
+        self.assertEqual(rect.area(), 4)

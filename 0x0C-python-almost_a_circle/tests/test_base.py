@@ -31,28 +31,28 @@ class TestBase(unittest.TestCase):
         '''Test incrementation of Base class id increment after none'''
         bc = Base()
         self.assertEqual(bc.id, 3)
-
+'''
     def test_base_e_id_negative(self):
-        '''Test instantiation of a Base class with id negative number'''
+        Test instantiation of a Base class with id negative number
         with self.assertRaises(ValueError):
             bc = Base(-10)
 
     def test_base_f_id_float(self):
-        '''Test instantiation of a Base class with id float'''
+        Test instantiation of a Base class with id float
         with self.assertRaises(ValueError):
             bc = Base(10.5)
 
     def test_base_g_id_list(self):
-        '''Test instantiation of a Base class with id list'''
+        Test instantiation of a Base class with id list
         with self.assertRaises(TypeError):
             bc = Base([1])
 
     def test_base_h_id_string(self):
-        '''Test instantiation of a Base class with id string'''
+        Test instantiation of a Base class with id string
         with self.assertRaises(TypeError):
             bc = Base("Betty")
 
     def test_base_i_id_tuple(self):
-        '''Test instantiation of a Base class with id tuple'''
+        Test instantiation of a Base class with id tuple
         with self.assertRaises(TypeError):
-            bc = Base((1,))
+            bc = Base((1,))'''
