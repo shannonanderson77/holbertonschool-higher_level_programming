@@ -4,6 +4,7 @@
 
 '''
 from models.base import Base
+from sys import argv
 
 
 class Rectangle(Base):
@@ -67,7 +68,7 @@ class Rectangle(Base):
     def display(self):
         ''' A function that prints a "#" Rectangle'''
         for i in range(self.y):
-            print("\n" * self.y)
+            print("")
         for i in range(self.height):
             print(" " * self.x + "#" * self.width)
 
@@ -78,3 +79,18 @@ class Rectangle(Base):
     def __str__(self):
         ''' A string representation of a Rectangle object'''
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args, **kwargs):
+        ''' A function that assigns an argument to each attribute'''
+        for i in range(len(args)):
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except IndexError:
+                pass
+        if kwargs is not None:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
