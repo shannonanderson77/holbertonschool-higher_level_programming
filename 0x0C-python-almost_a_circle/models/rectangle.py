@@ -15,7 +15,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        super(Rectangle, self).__init__(id)
+        super().__init__(id)
 
     @property
     def width(self):
@@ -95,3 +95,10 @@ class Rectangle(Base):
         if kwargs is not None:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        ''' A function that returns a dictionary representation of a Square'''
+        rect_dict = {}
+        for key, value in vars(self).items():
+            rect_dict[key] = value
+        return rect_dict
