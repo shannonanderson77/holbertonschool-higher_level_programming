@@ -98,7 +98,5 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         ''' A function that returns a dictionary representation of a Square'''
-        rect_dict = {}
-        for key, value in vars(self).items():
-            rect_dict[key] = value
-        return rect_dict
+        return {'width': self.width, 'height': self.height,
+                'x': self.x, 'y': self.y, 'id': self.id}
