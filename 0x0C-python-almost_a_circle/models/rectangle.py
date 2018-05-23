@@ -85,11 +85,11 @@ class Rectangle(Base):
         ''' A function that assigns an argument to each attribute'''
         for i in range(len(args)):
             try:
-                self.id = args[0]
-                self.width = args[1]
-                self.height = args[2]
-                self.x = args[3]
-                self.y = args[4]
+                setattr(self, id, args[0])
+                setattr(self, width, args[1])
+                setattr(self, height, args[2])
+                setattr(self, x, args[3])
+                setattr(self, y, args[4])
             except IndexError:
                 pass
         if kwargs is not None:
