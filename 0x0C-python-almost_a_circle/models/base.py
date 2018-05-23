@@ -16,9 +16,10 @@ class Base(object):
         else:
             self.id = id
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         ''' A function that returns a JSON string of a dictionary'''
-        if list_dictionaries is None or []:
+        if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
