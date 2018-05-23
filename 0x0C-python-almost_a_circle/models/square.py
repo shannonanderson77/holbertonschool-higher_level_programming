@@ -33,9 +33,8 @@ class Square(Rectangle):
             try:
                 self.id = args[0]
                 self.width = args[1]
-                self.height = args[2]
-                self.x = args[3]
-                self.y = args[4]
+                self.x = args[2]
+                self.y = args[3]
             except IndexError:
                 pass
         if kwargs is not None:
